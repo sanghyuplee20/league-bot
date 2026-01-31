@@ -26,6 +26,7 @@ async def load_cogs():
     await bot.load_extension('cogs.match_commands')
     await bot.load_extension('cogs.profile_commands')
     await bot.load_extension('cogs.team_commands')
+    await bot.load_extension('cogs.help_commands')
 
 @bot.event
 async def setup_hook():
