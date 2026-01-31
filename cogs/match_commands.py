@@ -24,8 +24,8 @@ class MatchCommands(commands.Cog):
             return
         
         # Parse mentions
-        team1_ids = [int(u.id) for u in interaction.message.mentions[:5]] if hasattr(interaction, 'message') else []
-        team2_ids = [int(u.id) for u in interaction.message.mentions[5:]] if hasattr(interaction, 'message') else []
+        team1_ids = [int(u.id) for u in interaction.message.mentions[:5]] if interaction.message else []
+        team2_ids = [int(u.id) for u in interaction.message.mentions[5:]] if interaction.message else []
         
         # For slash commands, we need to parse differently
         if not team1_ids or not team2_ids:
